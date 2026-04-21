@@ -552,3 +552,212 @@ th {
     background: #fdfaea;
     color: #725a02;
 }
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* --- Tablet (≤ 1024px) --- */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kanban-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #col-done {
+    grid-column: span 2;
+  }
+
+  .metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-row .metric-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* --- Mobile (≤ 640px) --- */
+@media (max-width: 640px) {
+
+  /* Header */
+  .app-header {
+    padding: 0 1rem;
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .user-info-text h4 {
+    font-size: 0.85rem;
+  }
+
+  .timer-display {
+    font-size: 1.1rem;
+  }
+
+  .toggle-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  /* Nav */
+  .app-nav {
+    padding: 0 1rem;
+    gap: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .app-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+    padding: 0.85rem 0.75rem;
+    white-space: nowrap;
+  }
+
+  /* Main Content */
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* View Header */
+  .view-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Profile Cards (Login) */
+  .profiles-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .profile-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .profile-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .profile-card h3 {
+    font-size: 0.85rem;
+  }
+
+  .profile-card p {
+    font-size: 0.75rem;
+  }
+
+  /* Setup Card */
+  .setup-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  /* Kanban */
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+
+  #col-done {
+    grid-column: span 1;
+  }
+
+  /* Metrics */
+  .metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-row .metric-card:last-child {
+    grid-column: span 1;
+  }
+
+  .metric-card h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Chart */
+  .chart-container {
+    height: 200px;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+    gap: 0.4rem;
+  }
+
+  .chart-bar {
+    max-width: 28px;
+  }
+
+  .chart-label {
+    font-size: 0.6rem;
+  }
+
+  /* Table - make scrollable */
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th, td {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  /* Export Actions */
+  .export-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .export-actions .toggle-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Team Grid */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .team-member {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Activity */
+  .activity-box {
+    padding: 1.25rem;
+  }
+}
+
+/* --- Extra Small (≤ 400px) --- */
+@media (max-width: 400px) {
+  .profiles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timer-controls {
+    gap: 0.5rem;
+  }
+}
+
